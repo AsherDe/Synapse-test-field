@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jira Dashboard - Corporate Intranet</title>
+    <link rel="stylesheet" href="../assets/css/area-a.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-content">
+            <h1>🏢 Jira Dashboard</h1>
+            <div class="user-info">
+                <span>Welcome, <strong id="username-display">TestUser</strong></span>
+                <a href="login.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="dashboard-content">
+            <div class="welcome-section">
+                <h2>Task Management Center</h2>
+                <p>Create and manage your project tasks efficiently</p>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-card">
+                    <h3>Open Tasks</h3>
+                    <span class="stat-number" id="open-tasks">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Completed Today</h3>
+                    <span class="stat-number" id="completed-tasks">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>In Progress</h3>
+                    <span class="stat-number" id="progress-tasks">3</span>
+                </div>
+            </div>
+
+            <div class="action-section">
+                <a href="create-task.html" class="create-task-btn">
+                    <span class="btn-icon">➕</span>
+                    Create New Task
+                </a>
+            </div>
+
+            <div class="recent-tasks">
+                <h3>Recent Tasks</h3>
+                <div class="task-list" id="recent-task-list">
+                    <div class="task-item">
+                        <div class="task-info">
+                            <span class="task-id">#PROJ-001</span>
+                            <span class="task-title">Login page styling issue</span>
+                        </div>
+                        <span class="task-status status-done">Done</span>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-info">
+                            <span class="task-id">#PROJ-002</span>
+                            <span class="task-title">Database connection timeout</span>
+                        </div>
+                        <span class="task-status status-progress">In Progress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/area-a-dashboard.js"></script>
+</body>
+</html>

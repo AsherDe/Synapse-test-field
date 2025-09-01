@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task - Jira System</title>
+    <link rel="stylesheet" href="../assets/css/area-a.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-content">
+            <h1>🏢 Create New Task</h1>
+            <div class="user-info">
+                <a href="dashboard.html" class="back-btn">← Back to Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="form-main">
+        <div class="form-container">
+            <form id="taskForm" class="task-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="project">Project *</label>
+                        <select id="project" name="project" required>
+                            <option value="">Select a project...</option>
+                            <option value="project-synapse">Project Synapse</option>
+                            <option value="project-cortex">Project Cortex</option>
+                            <option value="infra-team">Infra Team</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issueType">Issue Type *</label>
+                        <select id="issueType" name="issueType" required>
+                            <option value="">Select issue type...</option>
+                            <option value="bug">Bug</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="task">Task</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reporter">Reporter *</label>
+                        <input type="text" id="reporter" name="reporter" required placeholder="Enter reporter name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="component">Component</label>
+                        <input type="text" id="component" name="component" placeholder="e.g., Frontend, API, Database">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Priority *</label>
+                    <div class="priority-group" id="priorityGroup">
+                        <label class="radio-label">
+                            <input type="radio" name="priority" value="high" required>
+                            <span class="radio-custom"></span>
+                            High
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="priority" value="medium" required>
+                            <span class="radio-custom"></span>
+                            Medium
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="priority" value="low" required>
+                            <span class="radio-custom"></span>
+                            Low
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="summary">Summary *</label>
+                    <input type="text" id="summary" name="summary" required placeholder="Brief description of the issue">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description *</label>
+                    <textarea id="description" name="description" required rows="6" placeholder="Detailed description of the issue, steps to reproduce, expected behavior, etc."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Create Task</button>
+                    <button type="reset" class="cancel-btn">Clear Form</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal for random interference -->
+    <div id="adModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🎯 Quick Survey</h3>
+                <span class="close-modal" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>How satisfied are you with our task management system?</p>
+                <div class="survey-options">
+                    <button class="survey-btn">Very Satisfied</button>
+                    <button class="survey-btn">Satisfied</button>
+                    <button class="survey-btn">Neutral</button>
+                    <button class="survey-btn">Dissatisfied</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/area-a-create.js"></script>
+</body>
+</html>

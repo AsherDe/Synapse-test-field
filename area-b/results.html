@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - PaperFinder</title>
+    <link rel="stylesheet" href="../assets/css/area-b.css">
+</head>
+<body>
+    <header class="results-header">
+        <div class="header-content">
+            <h1>📚 PaperFinder</h1>
+            <div class="search-bar-small">
+                <input type="text" id="searchQuerySmall" placeholder="Search...">
+                <button class="search-btn-small">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="results-main">
+        <div class="results-container">
+            <div class="results-info">
+                <h2 id="resultsTitle">Search Results</h2>
+                <p id="resultsCount">Found 10 papers</p>
+            </div>
+
+            <div class="results-filters">
+                <div class="filter-group">
+                    <label for="sortBy">Sort by:</label>
+                    <select id="sortBy">
+                        <option value="relevance">Relevance</option>
+                        <option value="date">Publication Date</option>
+                        <option value="citations">Citations</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="yearFilter">Year:</label>
+                    <select id="yearFilter">
+                        <option value="">All Years</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results-list" id="resultsList">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn" id="prevPage" disabled>← Previous</button>
+                <span class="page-info">Page 1 of 10</span>
+                <button class="page-btn" id="nextPage">Next →</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/area-b-results.js"></script>
+</body>
+</html>

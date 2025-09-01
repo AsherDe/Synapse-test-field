@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Details - PaperFinder</title>
+    <link rel="stylesheet" href="../assets/css/area-b.css">
+    <link id="paperStyle" rel="stylesheet" href="../assets/css/paper-variant-a.css">
+</head>
+<body>
+    <header class="paper-header">
+        <div class="header-content">
+            <h1>📚 PaperFinder</h1>
+            <div class="header-actions">
+                <button class="back-btn" onclick="window.history.back()">← Back to Results</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="paper-main">
+        <div class="paper-container">
+            <article class="paper-content">
+                <div class="paper-meta">
+                    <span class="paper-type">Research Article</span>
+                    <span class="paper-date" id="paperDate">2024</span>
+                </div>
+
+                <h1 class="paper-title" id="paperTitle">Loading paper...</h1>
+                
+                <div class="paper-authors" id="paperAuthors">
+                    <span class="author">Author Name</span>
+                </div>
+
+                <div class="paper-journal" id="paperJournal">
+                    <strong>Published in:</strong> <span>Journal Name</span>
+                </div>
+
+                <div class="paper-actions">
+                    <button id="exportCitation" class="export-btn">
+                        <span class="btn-icon">📋</span>
+                        Export Citation
+                    </button>
+                    <button id="downloadPdf" class="download-btn">
+                        <span class="btn-icon">📄</span>
+                        Download PDF
+                    </button>
+                    <button class="bookmark-btn">
+                        <span class="btn-icon">🔖</span>
+                        Bookmark
+                    </button>
+                </div>
+
+                <div class="citation-success" id="citationSuccess" style="display: none;">
+                    <span class="success-icon">✅</span>
+                    Citation copied to clipboard!
+                </div>
+
+                <div class="paper-abstract">
+                    <h2>Abstract</h2>
+                    <p id="paperAbstract">Loading abstract...</p>
+                </div>
+
+                <div class="paper-keywords">
+                    <h3>Keywords</h3>
+                    <div class="keyword-list" id="keywordList">
+                        <!-- Keywords will be populated by JS -->
+                    </div>
+                </div>
+
+                <div class="paper-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Citations</span>
+                        <span class="stat-value" id="citationCount">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Downloads</span>
+                        <span class="stat-value" id="downloadCount">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Views</span>
+                        <span class="stat-value" id="viewCount">0</span>
+                    </div>
+                </div>
+
+                <div class="paper-references">
+                    <h2>References</h2>
+                    <div class="reference-list" id="referenceList">
+                        <!-- References will be populated by JS -->
+                    </div>
+                </div>
+            </article>
+
+            <aside class="paper-sidebar">
+                <div class="sidebar-section">
+                    <h3>Related Papers</h3>
+                    <div class="related-papers" id="relatedPapers">
+                        <!-- Related papers will be populated by JS -->
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Metrics</h3>
+                    <div class="metrics">
+                        <div class="metric-item">
+                            <span class="metric-label">Impact Factor</span>
+                            <span class="metric-value">2.4</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">H-Index</span>
+                            <span class="metric-value">15</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="../assets/js/area-b-paper.js"></script>
+</body>
+</html>

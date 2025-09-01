@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperFinder - Academic Literature Search</title>
+    <link rel="stylesheet" href="../assets/css/area-b.css">
+</head>
+<body>
+    <header class="search-header">
+        <div class="header-content">
+            <h1>📚 PaperFinder</h1>
+            <p>Academic Literature Search Engine</p>
+        </div>
+    </header>
+
+    <main class="search-main">
+        <div class="search-container">
+            <div class="search-hero">
+                <h2>Find Academic Papers</h2>
+                <p>Search through millions of academic papers and research articles</p>
+            </div>
+
+            <form id="searchForm" class="search-form">
+                <div class="search-input-group">
+                    <input 
+                        type="text" 
+                        id="searchQuery" 
+                        name="query" 
+                        placeholder="Enter keywords, author names, or paper titles..."
+                        required
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="search-btn">
+                        <span class="search-icon">🔍</span>
+                        Search
+                    </button>
+                </div>
+            </form>
+
+            <div class="search-suggestions">
+                <h3>Popular Searches:</h3>
+                <div class="suggestion-tags">
+                    <button class="suggestion-tag" data-query="machine learning">Machine Learning</button>
+                    <button class="suggestion-tag" data-query="artificial intelligence">Artificial Intelligence</button>
+                    <button class="suggestion-tag" data-query="web development">Web Development</button>
+                    <button class="suggestion-tag" data-query="data science">Data Science</button>
+                    <button class="suggestion-tag" data-query="computer vision">Computer Vision</button>
+                    <button class="suggestion-tag" data-query="natural language processing">NLP</button>
+                </div>
+            </div>
+
+            <div class="search-stats">
+                <div class="stat-item">
+                    <span class="stat-number">10M+</span>
+                    <span class="stat-label">Papers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500K+</span>
+                    <span class="stat-label">Authors</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Journals</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="search-footer">
+        <p>© 2025 PaperFinder - Academic Research Made Easy</p>
+        <p><a href="../index.html">← Back to Testing Platform</a></p>
+    </footer>
+
+    <script src="../assets/js/area-b-search.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* Paper Variant A - Export button in top-right corner */
+.paper-actions {
+    position: relative;
+}
+
+.export-btn {
+    position: absolute;
+    top: -120px;
+    right: 0;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .export-btn {
+        position: static;
+    }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoHub - Blog & Notes</title>
+    <link rel="stylesheet" href="../assets/css/area-c.css">
+</head>
+<body>
+    <header class="notes-header">
+        <div class="header-content">
+            <h1>📝 InfoHub</h1>
+            <p>Blog & Notes - Extract and Organize Information</p>
+            <a href="../index.html" class="back-link">← Back to Platform</a>
+        </div>
+    </header>
+
+    <main class="notes-main">
+        <div class="notes-container">
+            <div class="article-section">
+                <div class="article-header">
+                    <h2>Understanding WebAssembly: The Future of Web Performance</h2>
+                    <div class="article-meta" data-metadata="author:Dr. Alex Thompson, year:2024, category:technology">
+                        <span class="author">By Dr. Alex Thompson</span>
+                        <span class="date">Published: March 15, 2024</span>
+                        <span class="read-time">8 min read</span>
+                    </div>
+                </div>
+
+                <div class="article-content">
+                    <p data-metadata="type:introduction, importance:high">
+                        <b><i>What is WebAssembly?</i></b> - WebAssembly (abbreviated as WASM) is a binary instruction format 
+                        for a stack-based virtual machine. It is designed as a portable compilation target for programming 
+                        languages, enabling deployment on the web for client and server applications.
+                    </p>
+
+                    <h3>Key Benefits of WebAssembly</h3>
+                    <p data-metadata="type:benefits, category:performance">
+                        WebAssembly brings several significant advantages to web development:
+                    </p>
+
+                    <ul class="benefits-list">
+                        <li data-metadata="benefit:performance">
+                            <strong>Near-native performance:</strong> WASM code runs at near-native speed by taking 
+                            advantage of common hardware capabilities available on a wide range of platforms.
+                        </li>
+                        <li data-metadata="benefit:security">
+                            <strong>Secure execution:</strong> WebAssembly code is executed in a sandboxed environment, 
+                            providing memory-safe execution that prevents many common security vulnerabilities.
+                        </li>
+                        <li data-metadata="benefit:portability">
+                            <strong>Platform independence:</strong> WASM modules can run on any platform that supports 
+                            the WebAssembly runtime, making code truly portable across different environments.
+                        </li>
+                    </ul>
+
+                    <h3>Technical Implementation</h3>
+                    <p data-metadata="type:technical, complexity:medium">
+                        The implementation of WebAssembly involves several key components working together:
+                    </p>
+
+                    <div class="code-block" data-metadata="type:code-example, language:javascript">
+                        <h4>Loading a WebAssembly Module</h4>
+                        <pre><code>// Fetch and instantiate a WebAssembly module
+async function loadWasm(url) {
+    const wasmModule = await WebAssembly.instantiateStreaming(
+        fetch(url)
+    );
+    return wasmModule.instance.exports;
+}
+
+// Usage example
+const wasmExports = await loadWasm('math.wasm');
+const result = wasmExports.multiply(5, 10);
+console.log(result); // Output: 50</code></pre>
+                    </div>
+
+                    <p data-metadata="type:explanation, reference:code-example">
+                        The code above demonstrates the basic pattern for loading and using WebAssembly modules in JavaScript. 
+                        The <code>WebAssembly.instantiateStreaming()</code> function efficiently loads and compiles the WASM 
+                        module while it's being downloaded.
+                    </p>
+
+                    <h3>Use Cases and Applications</h3>
+                    <p data-metadata="type:use-cases, industry:multiple">
+                        WebAssembly has found applications across various domains:
+                    </p>
+
+                    <div class="use-cases" data-metadata="section:use-cases">
+                        <div class="use-case" data-metadata="industry:gaming">
+                            <h4>Game Development</h4>
+                            <p>Port existing C++ game engines to the web with minimal performance loss. 
+                            Companies like Unity and Unreal Engine have adopted WASM for web deployment.</p>
+                        </div>
+                        <div class="use-case" data-metadata="industry:multimedia">
+                            <h4>Media Processing</h4>
+                            <p>Video/audio processing, image manipulation, and real-time effects can benefit 
+                            from WASM's computational efficiency.</p>
+                        </div>
+                        <div class="use-case" data-metadata="industry:productivity">
+                            <h4>Productivity Applications</h4>
+                            <p>Office suites, CAD software, and other compute-intensive applications can 
+                            now run efficiently in browsers.</p>
+                        </div>
+                    </div>
+
+                    <blockquote data-metadata="type:quote, author:Brendan Eich, source:Mozilla">
+                        <p><i>"WebAssembly is not a replacement for JavaScript, but rather a complement to it. 
+                        It opens up new possibilities for bringing high-performance applications to the web 
+                        while maintaining the security and portability that makes the web platform so powerful."</i></p>
+                        <footer>— Brendan Eich, Creator of JavaScript</footer>
+                    </blockquote>
+
+                    <h3>Future Outlook</h3>
+                    <p data-metadata="type:future, timeline:2024-2026">
+                        Looking ahead, WebAssembly continues to evolve with exciting developments on the horizon. 
+                        The WebAssembly System Interface (WASI) promises to extend WASM beyond the browser, 
+                        enabling server-side and IoT applications. Additionally, features like garbage collection, 
+                        exception handling, and SIMD (Single Instruction, Multiple Data) support are making 
+                        WebAssembly even more powerful and accessible to developers.
+                    </p>
+
+                    <div class="article-footer" data-metadata="section:footer">
+                        <div class="tags">
+                            <span class="tag">WebAssembly</span>
+                            <span class="tag">WASM</span>
+                            <span class="tag">Web Performance</span>
+                            <span class="tag">Binary Format</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="loadComments" class="load-comments-btn">Load Comments</button>
+                <div id="commentsSection" class="comments-section" style="display: none;">
+                    <h3>Comments</h3>
+                    <div class="comment">
+                        <div class="comment-author">DevExpert2024</div>
+                        <div class="comment-content">Great explanation! I've been using WASM in production and the performance gains are impressive.</div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-author">WebDeveloper</div>
+                        <div class="comment-content">The code example really helped me understand how to get started. Thanks!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notes-section">
+                <div class="notes-header">
+                    <h3>📝 My Notes</h3>
+                    <div class="notes-actions">
+                        <button id="clearNotes" class="action-btn">Clear</button>
+                        <button id="exportNotes" class="action-btn">Export</button>
+                    </div>
+                </div>
+                <textarea 
+                    id="notesArea" 
+                    class="notes-textarea" 
+                    placeholder="Select text from the article and paste it here to organize your thoughts...
+
+You can copy:
+• Key definitions and concepts
+• Code examples  
+• Important quotes
+• Your own analysis and ideas
+
+Try selecting different types of content to test the clipboard enhancement features!"
+                    data-metadata="type:notes, user-content:true"></textarea>
+                
+                <div class="notes-stats">
+                    <span id="wordCount">0 words</span>
+                    <span id="charCount">0 characters</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/area-c-notes.js"></script>
+</body>
+</html>
